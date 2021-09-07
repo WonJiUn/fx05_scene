@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="215.0" prefWidth="365.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="ex01.Controller">
+   <children>
+      <AnchorPane layoutY="27.0" prefHeight="53.0" prefWidth="352.0">
+         <children>
+            <Label layoutX="43.0" layoutY="19.0" text="성  별" />
+            <RadioButton fx:id="rdoWoman" layoutX="100.0" layoutY="19.0" mnemonicParsing="false" selected="true" text="여성">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rdoMan" layoutX="171.0" layoutY="19.0" mnemonicParsing="false" text="남성" toggleGroup="$gender" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="12.0" layoutY="70.0" prefHeight="46.0" prefWidth="328.0">
+         <children>
+            <Label layoutX="31.0" layoutY="18.0" text="취  미" />
+            <CheckBox fx:id="chkMusic" layoutX="88.0" layoutY="18.0" mnemonicParsing="false" text="음악" />
+            <CheckBox fx:id="chkSport" layoutX="149.0" layoutY="18.0" mnemonicParsing="false" text="스포츠" />
+            <CheckBox fx:id="chkMovie" layoutX="224.0" layoutY="18.0" mnemonicParsing="false" text="영화" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="116.0" prefHeight="46.0" prefWidth="352.0">
+         <children>
+            <Label layoutX="43.0" layoutY="16.0" text="연령구분" />
+            <ComboBox fx:id="cmbAge" layoutX="100.0" layoutY="12.0" prefHeight="23.0" prefWidth="144.0" promptText="연령대 선택" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="270.0" layoutY="162.0" mnemonicParsing="false" onAction="#viewProc" prefHeight="31.0" prefWidth="57.0" text="확  인" />
+   </children>
+</AnchorPane>
